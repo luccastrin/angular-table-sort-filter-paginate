@@ -1,0 +1,146 @@
+#table {
+  padding: 50px 0;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  .filter {
+    margin-bottom: 40px;
+    
+    input {
+      width: 50%;
+      background: transparent;
+      border: 1px solid grey;
+      border-radius: 5px;
+      padding: 15px 15px 15px 15px;
+      color: white;
+
+      &::placeholder {
+        color: rgba($color: #fff, $alpha: 0.6);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &:first-child {
+    justify-content: flex-start;
+  }
+
+  .table-content {
+    margin-bottom: 20px;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+
+      &:checked {
+        background-color: blue;
+        width: 25px;
+        height: 25px;
+      }
+      
+      &[type="checkbox"] {
+        all: unset;
+        border: 2px solid grey;
+        width: 12px;
+        height: 12px;
+        border-radius: 3px;
+        display: inline-block;
+      }
+    }
+    
+    .header {
+      display: grid;
+      grid-template-columns: 35px 1fr 2fr 3fr;
+      color: white;
+      padding: 5px;
+      
+      span {
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    
+    .footer {
+      display: grid;
+      grid-template-columns: 35px 1fr 2fr 3fr;
+      color: white;
+      padding: 5px;
+      margin-bottom: 3px;
+      
+      span {
+        background-color: #26252c;
+        padding: 20px 10px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .paginator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .alignment {
+      display: flex;
+      align-items: center;
+      color: white;
+      
+      span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      select {
+        border: 1px solid grey;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+      }
+      
+      .items-page {
+        
+        span {
+          margin-right: 10px;
+        }
+      }
+
+      .number-pages {
+
+        span {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+        img {
+          width: 20px;
+
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+      
+      .margin {
+        margin-right: 20px;
+      }
+
+      .bar {
+        width: 2px;
+        height: 16px;
+        background-color: white;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+<section id="table">
+  <div class="container">
+    <h2>Paginação, ordenação e filtro em tabela</h2>
+
+    <div class="filter">
+      <input type="text" placeholder="filtrar por nome, email ou corpo...">
+    </div>
+
+    <div class="table-content">
+      <div class="header">
+        <span>
+          <input 
+            type="checkbox" 
+            (change)="checkboxEvent($event)"
+          >
+        </span>
+        <span>Nome</span>
+        <span>Email</span>
+        <span>Corpo</span>
+      </div>
+      <div class="footer" *ngFor="let comment of tableContent">
+        <span>
+          <input type="checkbox">
+        </span>
+        <span>{{ comment.name }}</span>
+        <span>{{ comment.email }}</span>
+        <span>{{ comment.body }}</span>
+      </div>
+    </div>
+  
+    <div class="paginator">
+      <div class="alignment">
+        <div class="items-page margin">
+          <span>itens por página:</span>
+          <select>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+
+        <div class="bar margin"></div>
+
+        <div class="items-quantity margin">
+          <span>1-5 de 50 itens</span>
+        </div>
+
+        <div class="bar margin"></div>
+
+        <div class="number-pages margin">
+          <select>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+          <span>de 10 páginas</span>
+          <img src="./assets/images/left-arrow.png" alt="">
+          <img src="./assets/images/right-arrow.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
